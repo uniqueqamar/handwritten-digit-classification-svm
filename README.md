@@ -3,7 +3,7 @@ This project builds a basic image classifier using scikit-learn to recognize han
 
 ## Sample Digits
 
-![Digits](sample_digits.png)
+![Digits](sample_images.png)
 
 ## Confusion Matrix
 
