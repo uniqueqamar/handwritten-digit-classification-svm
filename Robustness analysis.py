@@ -1,7 +1,9 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')  # non-interactive backend, saves files without needing a display
+import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -137,7 +139,6 @@ def plot_confusion_matrix(y_test: np.ndarray, y_pred: np.ndarray,
     ax.set_title(title, fontsize=13, pad=12)
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
     print(f"  [saved] {save_path}")
 
 
@@ -158,7 +159,6 @@ def plot_accuracy_vs_noise(results: dict, save_path: str = "accuracy_vs_noise.pn
     ax.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
     print(f"  [saved] {save_path}")
 
 
@@ -188,7 +188,6 @@ def plot_per_class_f1_heatmap(results: dict, save_path: str = "per_class_f1_heat
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
     print(f"  [saved] {save_path}")
 
 
@@ -215,7 +214,6 @@ def plot_vulnerability_ranking(results: dict, save_path: str = "digit_vulnerabil
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
     print(f"  [saved] {save_path}")
 
 
@@ -254,7 +252,7 @@ def plot_misclassified_samples(
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
+
     print(f"  [saved] {save_path}")
 
 
@@ -290,7 +288,6 @@ def plot_noisy_vs_clean(
 
     plt.tight_layout()
     plt.savefig(save_path, dpi=150, bbox_inches="tight")
-    plt.show()
     print(f"  [saved] {save_path}")
 
 
